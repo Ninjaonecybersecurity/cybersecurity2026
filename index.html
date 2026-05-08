@@ -282,6 +282,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
     <p class="desc">Cochez les points que vous maîtrisez déjà. Votre score s'affiche instantanément.</p>
 
     <form action="https://formspree.io/f/xnjwbkrv" method="POST">
+   <div class="section" id="checklist">
+  <div class="section-eyebrow">Auto-évaluation</div>
+  <h2>Évaluez votre niveau de protection</h2>
+  <p class="desc">Cochez les points que vous maîtrisez déjà. Votre score s'affiche instantanément.</p>
+
+  <form action="https://formspree.io/f/xnjwbkrv" method="POST">
+    <input type="hidden" name="score" id="form-score" value="0/8">
+
     <div class="checklist-card">
       <div class="checklist-head">
         <span class="checklist-head-title">Critères de sécurité</span>
@@ -296,6 +304,22 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution répond aux exigences RGPD et obligations sectorielles</div></div>
       <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai en interne une équipe dédiée à la gestion et à la résolution des problématiques de cybersécurité</div></div>
     </div>
+
+    <div class="score-box">
+      <div class="score-top">
+        <span class="score-lbl">Score de maturité</span>
+        <span class="score-val" id="score-num">0 <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ 8</span></span>
+      </div>
+      <div class="score-track"><div class="score-fill" id="sf"></div></div>
+      <div class="score-msg" id="sm">Cochez les critères ci-dessus pour obtenir votre score</div>
+    </div>
+
+    <button type="submit" style="width:100%;font-family:var(--font);font-size:15px;font-weight:700;background:var(--green);color:var(--navy-deep);border:none;padding:16px 28px;border-radius:4px;cursor:pointer;margin-bottom:40px;letter-spacing:0.2px;transition:background .2s;" onmouseover="this.style.background='#17E685'" onmouseout="this.style.background='#04FF88'">
+      ✓ Soumettre mon auto-évaluation
+    </button>
+
+  </form>
+</div>
 
     <div class="nis2-card">
       <div class="nis2-head">
