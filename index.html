@@ -276,11 +276,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 
   <hr class="divider">
 
-  <div class="section" id="checklist">
+<div class="section" id="checklist">
     <div class="section-eyebrow">Auto-évaluation</div>
     <h2>Évaluez votre niveau de protection</h2>
     <p class="desc">Cochez les points que vous maîtrisez déjà. Votre score s'affiche instantanément.</p>
 
+    <form action="https://formspree.io/f/xnjwbkrv" method="POST">
     <div class="checklist-card">
       <div class="checklist-head">
         <span class="checklist-head-title">Critères de sécurité</span>
@@ -319,7 +320,11 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="score-msg" id="sm">Cochez les critères ci-dessus pour obtenir votre score</div>
     </div>
 
-    <div class="cta-box">
+    <input type="hidden" name="score" id="form-score" value="0/8">
+<button type="submit" style="width:100%;font-family:var(--font);font-size:15px;font-weight:700;background:var(--green);color:var(--navy-deep);border:none;padding:16px 28px;border-radius:4px;cursor:pointer;margin-bottom:40px;letter-spacing:0.2px;transition:all .2s;" onmouseover="this.style.background='#17E685'" onmouseout="this.style.background='var(--green)'">
+  ✓ Soumettre mon auto-évaluation
+</button>
+</form><div class="cta-box">
       <h3>Discutons de votre situation</h3>
       <p>Un audit de 30 minutes suffit pour identifier les axes d'amélioration et vous recommander la solution adaptée à votre contexte.</p>
       <a href="https://meetings.salesloft.com/ninjaone/oliviasubhi/personal?length=30">
@@ -345,7 +350,7 @@ function toggle(el){
   var pct=Math.round(done/total*100);
   document.getElementById('sf').style.width=pct+'%';
   document.getElementById('score-num').innerHTML=done+' <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ '+total+'</span>';
-  document.getElementById('cl-count').textContent=done+' / '+total;
+  document.getElementById('cl-count').textContent=done+' / '+total;document.getElementById('form-score').value=done+'/'+total;
   var fill=document.getElementById('sf');
   var msg=document.getElementById('sm');
   if(pct===0){fill.style.background='#04FF88';msg.style.color='var(--gray)';msg.innerHTML='Cochez les critères ci-dessus pour obtenir votre score';}
