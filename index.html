@@ -77,18 +77,93 @@ h2{font-size:clamp(20px,3vw,30px);font-weight:700;letter-spacing:-0.5px;margin-b
 .tag-blue{background:rgba(96,165,250,.08);color:#93c5fd;border-color:rgba(96,165,250,.2)}
 
 /* CHECKLIST */
-.checklist-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:16px}
-.checklist-head{padding:16px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.checklist-head-title{font-size:13px;font-weight:600;color:var(--gray)}
-.score-badge{font-size:12px;font-weight:600;color:var(--gray2)}
-.ci{display:flex;align-items:flex-start;gap:13px;padding:13px 24px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;user-select:none}
-.ci:last-child{border-bottom:none}
-.ci:hover{background:rgba(255,255,255,0.02)}
-.cb{width:18px;height:18px;border-radius:3px;border:1.5px solid var(--gray2);flex-shrink:0;margin-top:3px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:11px;color:transparent}
-.ci.done .cb{background:var(--green);border-color:var(--green);color:var(--navy-deep)}
-.ci.done .cb::after{content:'✓';font-weight:700}
-.cl{font-size:14px;color:#e8f0f7;line-height:1.55}
-.ci.done .cl{color:var(--gray2);text-decoration:line-through}
+<!-- CHECKLIST FORM -->
+<form action="https://formspree.io/f/xnjwbkrv" method="POST">
+</form>
+/* CHECKLIST */
+.checklist-card {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.checklist-head {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checklist-head-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.score-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray2);
+}
+
+.ci {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 13px 24px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .15s;
+  user-select: none;
+}
+
+.ci:last-child {
+  border-bottom: none;
+}
+
+.ci:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cb {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1.5px solid var(--gray2);
+  flex-shrink: 0;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+  font-size: 11px;
+  color: transparent;
+}
+
+.ci.done .cb {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--navy-deep);
+}
+
+.ci.done .cb::after {
+  content: '✓';
+  font-weight: 700;
+}
+
+.cl {
+  font-size: 14px;
+  color: #e8f0f7;
+  line-height: 1.55;
+}
+
+.ci.done .cl {
+  color: var(--gray2);
+  text-decoration: line-through;
+}
 
 /* NIS2 */
 .nis2-card{background:var(--navy-mid);border:1px solid rgba(4,255,136,0.2);border-radius:6px;overflow:hidden;margin-bottom:24px}
