@@ -295,14 +295,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
         <span class="checklist-head-title">Critères de sécurité</span>
         <span class="score-badge" id="cl-count">0 / 8</span>
       </div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution détecte les menaces inconnues (zero-day), pas seulement les virus connus</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">En cas d'incident, une machine peut être isolée en moins de 5 minutes</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai une vue centralisée de tous mes endpoints — postes, serveurs, mobiles</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma protection se met à jour automatiquement face aux nouvelles menaces</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Je reçois des rapports réguliers sur les tentatives d'intrusion détectées</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Mes appareils mobiles et tablettes sont couverts par la même solution</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution répond aux exigences RGPD et obligations sectorielles</div></div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai en interne une équipe dédiée à la gestion et à la résolution des problématiques de cybersécurité</div></div>
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution détecte les menaces inconnues (zero-day), pas seulement les virus connus</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">En cas d'incident, une machine peut être isolée en moins de 5 minutes</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai une vue centralisée de tous mes endpoints — postes, serveurs, mobiles</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma protection se met à jour automatiquement face aux nouvelles menaces</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Je reçois des rapports réguliers sur les tentatives d'intrusion détectées</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Mes appareils mobiles et tablettes sont couverts par la même solution</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution répond aux exigences RGPD et obligations sectorielles</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai en interne une équipe dédiée à la gestion et à la résolution des problématiques de cybersécurité</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
     </div>
 
     <div class="score-box">
@@ -322,10 +322,10 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="nis2-context">
         La directive <strong>NIS2</strong> s'applique aux organisations des secteurs critiques — santé, énergie, transport, finance, collectivités. Elle impose des obligations strictes en matière de cybersécurité et de notification d'incidents.
       </div>
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Mon organisation est concernée par la directive NIS2</div></div>
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">J'ai réalisé une analyse de risques conforme aux exigences NIS2</div></div>
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Des mesures techniques et organisationnelles ont été mises en place</div></div>
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Un processus de notification d'incidents sous 24h est opérationnel</div></div>
+      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Mon organisation est concernée par la directive NIS2</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">J'ai réalisé une analyse de risques conforme aux exigences NIS2</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Des mesures techniques et organisationnelles ont été mises en place</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Un processus de notification d'incidents sous 24h est opérationnel</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
     </div>
 
     <div class="score-box">
@@ -360,20 +360,47 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 </footer>
 
 <script>
-function toggle(el){
+function toggle(el, id){
   el.classList.toggle('done');
+  
+  // update the hidden field for this question
+  var field = document.getElementById(id);
+  if(field) field.value = el.classList.contains('done') ? 'Oui' : 'Non';
+  
+  // existing score logic
   var items=document.querySelectorAll('.ci');
   var done=document.querySelectorAll('.ci.done').length;
   var total=items.length;
   var pct=Math.round(done/total*100);
   document.getElementById('sf').style.width=pct+'%';
   document.getElementById('score-num').innerHTML=done+' <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ '+total+'</span>';
-  document.getElementById('cl-count').textContent=done+' / '+total;document.getElementById('form-score').value=done+'/'+total;
+  document.getElementById('cl-count').textContent=done+' / '+total;
+  document.getElementById('form-score').value=done+'/'+total;
   var fill=document.getElementById('sf');
   var msg=document.getElementById('sm');
   if(pct===0){fill.style.background='#04FF88';msg.style.color='var(--gray)';msg.innerHTML='Cochez les critères ci-dessus pour obtenir votre score';}
   else if(done<7){fill.style.background='#e05252';msg.style.color='#fca5a5';msg.innerHTML='Votre score est en dessous de 7 — <a href="https://meetings.salesloft.com/ninjaone/oliviasubhi/personal?length=30" style="color:#fca5a5">prenez rendez-vous</a> ou <a href="mailto:olivia.subhi@ninjaone.com" style="color:#fca5a5">contactez-moi</a> directement.';}
   else{fill.style.background='#04FF88';msg.style.color='#17E685';msg.innerHTML='Excellent niveau de maturité — continuons à l\'optimiser ensemble.';}
+}
+
+function toggleNis2(el, id){
+  el.classList.toggle('done');
+  
+  // update the hidden field for this NIS2 question
+  var field = document.getElementById(id);
+  if(field) field.value = el.classList.contains('done') ? 'Oui' : 'Non';
+  
+  var items=document.querySelectorAll('.nis2-ci');
+  var done=document.querySelectorAll('.nis2-ci.done').length;
+  var total=items.length;
+  var pct=Math.round(done/total*100);
+  document.getElementById('sf-nis2').style.width=pct+'%';
+  document.getElementById('score-num-nis2').innerHTML=done+' <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ '+total+'</span>';
+  document.getElementById('form-score-nis2').value=done+'/'+total;
+  var msg=document.getElementById('sm-nis2');
+  if(pct===0){msg.style.color='var(--gray)';msg.innerHTML='Cochez les critères NIS2 ci-dessus';}
+  else if(done<total){msg.style.color='#fca5a5';msg.innerHTML='Conformité NIS2 partielle — des actions sont nécessaires.';}
+  else{msg.style.color='#17E685';msg.innerHTML='Bonne conformité NIS2 !';}
 }
 </script>
 </body>
