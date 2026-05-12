@@ -285,8 +285,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
   </div>
   <hr class="divider">
 
-Voici le bloc entièrement corrigé — remplacez-le dans votre index.html :
-html<div class="section" id="vulnerabilites">
+<div class="section" id="vulnerabilites">
   <div class="section-eyebrow">Gestion des vulnérabilités</div>
   <h2>Identifiez et corrigez vos failles avant les attaquants</h2>
   <p class="desc">La gestion des vulnérabilités est un processus continu qui permet de détecter, prioriser et corriger les failles de sécurité avant qu'elles ne soient exploitées.</p>
@@ -316,21 +315,21 @@ html<div class="section" id="vulnerabilites">
     <div class="edr-item bd">
       <div class="edr-dot" style="background:var(--green);color:var(--navy-deep);">03</div>
       <div>
-        <div class="edr-name">Remédiation & Patch Management</div>
+        <div class="edr-name" style="display:flex;align-items:center;gap:12px;">
+          Remédiation & Patch Management
+          <a href="https://view-su2.highspot.com/viewer/85ac1c845347066d6982faac6e968d8d" target="_blank" style="font-size:14px;font-weight:700;color:var(--white);text-decoration:none;white-space:nowrap;opacity:0.9;">📄 Voir la brochure →</a>
+        </div>
         <div class="edr-desc">Déployez les correctifs automatiquement sur l'ensemble de votre parc, suivez les taux de correction et générez des rapports de conformité pour vos audits.</div>
         <div class="edr-tags"><span class="tag tag-blue">Patch automatique</span><span class="tag tag-blue">Suivi des corrections</span><span class="tag tag-blue">Rapports audit</span></div>
       </div>
     </div>
 
   </div>
-
   <div class="score-box" style="margin-top:32px;margin-bottom:0;">
     <div class="score-msg" style="color:var(--gray);text-align:center;padding:8px 0;">
       💡 <strong style="color:var(--white);">NinjaOne</strong> intègre nativement la gestion des vulnérabilités et le patch management dans une seule plateforme — sans outil supplémentaire.
       <br><br>
       <a href="https://meetings.salesloft.com/ninjaone/oliviasubhi/personal?length=30" style="color:var(--green);font-weight:700;">Voir une démo →</a>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="https://view-su2.highspot.com/viewer/85ac1c845347066d6982faac6e968d8d" target="_blank" style="color:var(--green);font-weight:700;">📄 Voir la brochure →</a>
     </div>
   </div>
 </div>
@@ -414,11 +413,7 @@ html<div class="section" id="vulnerabilites">
       <div class="score-msg" id="sm-nis2">Cochez les critères NIS2 ci-dessus</div>
     </div>
 
-    <input type="email" name="email" placeholder="Votre email professionnel" style="width:100%;padding:12px;margin-bottom:16px;border:1px solid var(--navy-mid);background:transparent;color:var(--white);border-radius:4px;font-family:var(--font);font-size:14px;">
-
-    <button type="submit" style="width:100%;font-family:var(--font);font-size:15px;font-weight:700;background:var(--green);color:var(--navy-deep);border:none;padding:16px 28px;border-radius:4px;cursor:pointer;margin-bottom:48px;letter-spacing:0.2px;transition:background .2s;" onmouseover="this.style.background='#17E685'" onmouseout="this.style.background='#04FF88'">
-      ✓ Soumettre mon auto-évaluation
-    </button>
+    <input type="email" name="email" placeholder="Votre email professionnel" style="width:100%;padding:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.08);color:var(--white);border-radius:4px;font-family:var(--font);font-size:14px;">
 
   </form>
 </div>
@@ -431,7 +426,7 @@ html<div class="section" id="vulnerabilites">
       <h3>Discutons de votre situation</h3>
       <p>Un audit de 30 minutes suffit pour identifier les axes d'amélioration et vous recommander la solution adaptée à votre contexte.</p>
       <a href="https://meetings.salesloft.com/ninjaone/oliviasubhi/personal?length=30">
-        Réserver un créneau gratuit
+        Réserver un créneau
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
       <span class="cta-note">30 minutes · Sans engagement · Réponse sous 24h</span>
