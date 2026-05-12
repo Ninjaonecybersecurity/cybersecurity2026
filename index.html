@@ -247,84 +247,93 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
     <h2>Trois EDR de référence pour sécuriser vos endpoints</h2>
     <p class="desc">Un EDR va au-delà de l'antivirus : détection comportementale en temps réel, isolation automatique, et réponse aux incidents sans délai.</p>
     <div class="edr-list">
-      <div class="edr-item s1" onclick="window.open('https://view-su2.highspot.com/viewer/a6cf0c867489e84f9d06e0496363745e','_blank')" style="cursor:pointer;">
-  <div class="edr-dot">S1</div>
-  <div>
-    <div class="edr-name">SentinelOne
-      <span style="font-size:12px;font-weight:400;color:var(--green);margin-left:8px;">Voir la brochure →</span>
-    </div>
+
+      <!-- SentinelOne -->
+      <div class="edr-item s1">
+        <div class="edr-dot">S1</div>
+        <div>
+          <div class="edr-name">SentinelOne</div>
           <div class="edr-desc">Détection et réponse autonomes pilotées par l'IA. Idéal pour les équipes IT réduites souhaitant une protection maximale sans complexité opérationnelle.</div>
           <div class="edr-tags"><span class="tag tag-purple">Zero-day</span><span class="tag tag-purple">Rollback automatique</span><span class="tag tag-purple">Cloud & on-premise</span></div>
+          <a href="https://view-su2.highspot.com/viewer/a6cf0c867489e84f9d06e0496363745e" target="_blank" style="display:inline-block;margin-top:10px;font-size:13px;color:var(--green);font-weight:600;text-decoration:none;">📄 Voir la brochure SentinelOne →</a>
         </div>
       </div>
-      <span class="tag tag-red">...</span></div>
-<a href="https://view-su2.highspot.com/viewer/320bae40ddbf45f00f727782ea241d32" 
-   target="_blank" 
-   style="display:inline-block;margin-top:10px;font-size:13px;color:var(--green);font-weight:600;text-decoration:none;">
-  Voir la brochure CrowdStrike →
+
+      <!-- CrowdStrike -->
+      <div class="edr-item cs">
         <div class="edr-dot">CS</div>
         <div>
           <div class="edr-name">CrowdStrike Falcon</div>
           <div class="edr-desc">Plateforme cloud-native avec une visibilité étendue sur les menaces. Particulièrement adapté aux environnements complexes, multi-sites ou distribués.</div>
           <div class="edr-tags"><span class="tag tag-red">Threat intelligence</span><span class="tag tag-red">Forensics avancés</span><span class="tag tag-red">Multi-OS</span></div>
+          <a href="https://view-su2.highspot.com/viewer/320bae40ddbf45f00f727782ea241d32" target="_blank" style="display:inline-block;margin-top:10px;font-size:13px;color:var(--green);font-weight:600;text-decoration:none;">📄 Voir la brochure CrowdStrike →</a>
         </div>
       </div>
+
+      <!-- Bitdefender -->
       <div class="edr-item bd">
         <div class="edr-dot">BD</div>
         <div>
           <div class="edr-name">Bitdefender GravityZone</div>
           <div class="edr-desc">Protection enterprise accessible, excellent rapport qualité/prix. La solution privilégiée pour les PME souhaitant une sécurité robuste sans surcoût.</div>
-          <div class="edr-tags"> <div class="edr-tags"><a href="https://view-su2.highspot.com/viewer/1181d3cc0eca44c2f3e45d57e4352e1a" 
-   target="_blank" 
-   style="display:inline-block;margin-top:10px;font-size:13px;color:var(--green);font-weight:600;text-decoration:none;">
-  Voir la brochure Bitdefender →<span class="tag tag-blue">Déploiement rapide</span><span class="tag tag-blue">Patch management</span><span class="tag tag-blue">RGPD-ready</span></div>
+          <div class="edr-tags"><span class="tag tag-blue">Déploiement rapide</span><span class="tag tag-blue">Patch management</span><span class="tag tag-blue">RGPD-ready</span></div>
+          <a href="https://view-su2.highspot.com/viewer/1181d3cc0eca44c2f3e45d57e4352e1a" target="_blank" style="display:inline-block;margin-top:10px;font-size:13px;color:var(--green);font-weight:600;text-decoration:none;">📄 Voir la brochure Bitdefender →</a>
         </div>
       </div>
+
     </div>
   </div>
-
   <hr class="divider">
 
-<div class="section" id="vulnerabilites">
+Voici le bloc entièrement corrigé — remplacez-le dans votre index.html :
+html<div class="section" id="vulnerabilites">
   <div class="section-eyebrow">Gestion des vulnérabilités</div>
   <h2>Identifiez et corrigez vos failles avant les attaquants</h2>
   <p class="desc">La gestion des vulnérabilités est un processus continu qui permet de détecter, prioriser et corriger les failles de sécurité avant qu'elles ne soient exploitées.</p>
-
   <div class="edr-list">
+
+    <!-- 01 Détection continue -->
     <div class="edr-item s1">
       <div class="edr-dot" style="background:var(--green);color:var(--navy-deep);">01</div>
       <div>
         <div class="edr-name">Détection continue</div>
         <div class="edr-desc">Scannez en permanence vos endpoints, serveurs et applications pour identifier les vulnérabilités connues (CVE) avant qu'elles ne soient exploitées par des acteurs malveillants.</div>
         <div class="edr-tags"><span class="tag tag-purple">Scan automatisé</span><span class="tag tag-purple">CVE & CVSS</span><span class="tag tag-purple">Temps réel</span></div>
-<a href="https://view-su2.highspot.com/viewer/85ac1c845347066d6982faac6e968d8d" target="_blank" style="color:var(--green);font-weight:700;">Voir la brochure →</a> 
       </div>
     </div>
+
+    <!-- 02 Priorisation intelligente -->
     <div class="edr-item cs">
       <div class="edr-dot" style="background:var(--green);color:var(--navy-deep);">02</div>
       <div>
         <div class="edr-name">Priorisation intelligente</div>
         <div class="edr-desc">Toutes les vulnérabilités ne sont pas égales. Priorisez les corrections selon le niveau de risque, l'exposition de l'asset et l'impact potentiel sur votre activité.</div>
-        <div class="edr-tags">
-</a><span class="tag tag-red">Score de risque</span><span class="tag tag-red">Criticité métier</span><span class="tag tag-red">Exposition réseau</span></div>
+        <div class="edr-tags"><span class="tag tag-red">Score de risque</span><span class="tag tag-red">Criticité métier</span><span class="tag tag-red">Exposition réseau</span></div>
       </div>
     </div>
+
+    <!-- 03 Remédiation -->
     <div class="edr-item bd">
       <div class="edr-dot" style="background:var(--green);color:var(--navy-deep);">03</div>
       <div>
         <div class="edr-name">Remédiation & Patch Management</div>
         <div class="edr-desc">Déployez les correctifs automatiquement sur l'ensemble de votre parc, suivez les taux de correction et générez des rapports de conformité pour vos audits.</div>
-</a><span class="tag tag-blue">Patch automatique</span><span class="tag tag-blue">Suivi des corrections</span><span class="tag tag-blue">Rapports audit</span></div>
+        <div class="edr-tags"><span class="tag tag-blue">Patch automatique</span><span class="tag tag-blue">Suivi des corrections</span><span class="tag tag-blue">Rapports audit</span></div>
       </div>
-    </div> 
+    </div>
+
   </div>
 
   <div class="score-box" style="margin-top:32px;margin-bottom:0;">
     <div class="score-msg" style="color:var(--gray);text-align:center;padding:8px 0;">
       💡 <strong style="color:var(--white);">NinjaOne</strong> intègre nativement la gestion des vulnérabilités et le patch management dans une seule plateforme — sans outil supplémentaire.
       <br><br>
+      <a href="https://meetings.salesloft.com/ninjaone/oliviasubhi/personal?length=30" style="color:var(--green);font-weight:700;">Voir une démo →</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="https://view-su2.highspot.com/viewer/85ac1c845347066d6982faac6e968d8d" target="_blank" style="color:var(--green);font-weight:700;">📄 Voir la brochure →</a>
+    </div>
+  </div>
 </div>
-
     <form action="https://formspree.io/f/xnjwbkrv" method="POST">
    <div class="section" id="checklist">
   <div class="section-eyebrow">Auto-évaluation</div>
@@ -332,21 +341,38 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
   <p class="desc">Cochez les points que vous maîtrisez déjà. Votre score s'affiche instantanément.</p>
 
   <form action="https://formspree.io/f/xnjwbkrv" method="POST">
-    <input type="hidden" name="score" id="form-score" value="0/8">
+
+    <input type="hidden" name="score_securite" id="form-score" value="0/8">
+    <input type="hidden" name="score_nis2" id="form-score-nis2" value="0/4">
 
     <div class="checklist-card">
       <div class="checklist-head">
         <span class="checklist-head-title">Critères de sécurité</span>
         <span class="score-badge" id="cl-count">0 / 8</span>
       </div>
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution détecte les menaces inconnues (zero-day), pas seulement les virus connus</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">En cas d'incident, une machine peut être isolée en moins de 5 minutes</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai un outil pour la gestion des vulnérabilités</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma protection se met à jour automatiquement face aux nouvelles menaces</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Je reçois des rapports réguliers sur les tentatives d'intrusion détectées</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Mes appareils mobiles et tablettes sont couverts par la même solution</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">Ma solution répond aux exigences RGPD et obligations sectorielles</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="ci" onclick="toggle(this)"><div class="cb"></div><div class="cl">J'ai en interne une équipe dédiée à la gestion et à la résolution des problématiques de cybersécurité</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="ci" onclick="toggle(this, 'q1')"><div class="cb"></div><div class="cl">Ma solution détecte les menaces inconnues (zero-day), pas seulement les virus connus</div></div>
+      <input type="hidden" name="q1_zero_day" id="q1" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q2')"><div class="cb"></div><div class="cl">En cas d'incident, une machine peut être isolée en moins de 5 minutes</div></div>
+      <input type="hidden" name="q2_isolation" id="q2" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q3')"><div class="cb"></div><div class="cl">J'ai un outil pour la gestion des vulnérabilités</div></div>
+      <input type="hidden" name="q3_vulnerabilites" id="q3" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q4')"><div class="cb"></div><div class="cl">Ma protection se met à jour automatiquement face aux nouvelles menaces</div></div>
+      <input type="hidden" name="q4_mises_a_jour" id="q4" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q5')"><div class="cb"></div><div class="cl">Je reçois des rapports réguliers sur les tentatives d'intrusion détectées</div></div>
+      <input type="hidden" name="q5_rapports" id="q5" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q6')"><div class="cb"></div><div class="cl">Mes appareils mobiles et tablettes sont couverts par la même solution</div></div>
+      <input type="hidden" name="q6_mobiles" id="q6" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q7')"><div class="cb"></div><div class="cl">Ma solution répond aux exigences RGPD et obligations sectorielles</div></div>
+      <input type="hidden" name="q7_rgpd" id="q7" value="Non">
+
+      <div class="ci" onclick="toggle(this, 'q8')"><div class="cb"></div><div class="cl">J'ai en interne une équipe dédiée à la gestion et à la résolution des problématiques de cybersécurité</div></div>
+      <input type="hidden" name="q8_equipe" id="q8" value="Non">
     </div>
 
     <div class="score-box">
@@ -366,21 +392,36 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="nis2-context">
         La directive <strong>NIS2</strong> s'applique aux organisations des secteurs critiques — santé, énergie, transport, finance, collectivités. Elle impose des obligations strictes en matière de cybersécurité et de notification d'incidents.
       </div>
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Mon organisation est concernée par la directive NIS2</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">J'ai réalisé une analyse de risques conforme aux exigences NIS2</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Des mesures techniques et organisationnelles ont été mises en place</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
-      <div class="nis2-ci" onclick="this.classList.toggle('done')"><div class="cb"></div><div class="cl">Un processus de notification d'incidents sous 24h est opérationnel</div></div><input type="hidden" name="q1_zero_day" id="q1" value="Non">
+      <div class="nis2-ci" onclick="toggleNis2(this, 'n1')"><div class="cb"></div><div class="cl">Mon organisation est concernée par la directive NIS2</div></div>
+      <input type="hidden" name="n1_concerne" id="n1" value="Non">
+
+      <div class="nis2-ci" onclick="toggleNis2(this, 'n2')"><div class="cb"></div><div class="cl">J'ai réalisé une analyse de risques conforme aux exigences NIS2</div></div>
+      <input type="hidden" name="n2_analyse_risques" id="n2" value="Non">
+
+      <div class="nis2-ci" onclick="toggleNis2(this, 'n3')"><div class="cb"></div><div class="cl">Des mesures techniques et organisationnelles ont été mises en place</div></div>
+      <input type="hidden" name="n3_mesures" id="n3" value="Non">
+
+      <div class="nis2-ci" onclick="toggleNis2(this, 'n4')"><div class="cb"></div><div class="cl">Un processus de notification d'incidents sous 24h est opérationnel</div></div>
+      <input type="hidden" name="n4_notification" id="n4" value="Non">
     </div>
 
-    <div class="score-box">
+    <div class="score-box" style="margin-bottom:32px;">
       <div class="score-top">
-        <span class="score-lbl">Score de maturité</span>
-        <span class="score-val" id="score-num">0 <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ 8</span></span>
+        <span class="score-lbl">Score NIS2</span>
+        <span class="score-val" id="score-num-nis2">0 <span style="font-size:13px;font-weight:400;color:var(--gray2)">/ 4</span></span>
       </div>
-      <div class="score-track"><div class="score-fill" id="sf"></div></div>
-      <div class="score-msg" id="sm">Cochez les critères ci-dessus pour obtenir votre score</div>
+      <div class="score-track"><div class="score-fill" id="sf-nis2" style="background:var(--green)"></div></div>
+      <div class="score-msg" id="sm-nis2">Cochez les critères NIS2 ci-dessus</div>
     </div>
-    
+
+    <input type="email" name="email" placeholder="Votre email professionnel" style="width:100%;padding:12px;margin-bottom:16px;border:1px solid var(--navy-mid);background:transparent;color:var(--white);border-radius:4px;font-family:var(--font);font-size:14px;">
+
+    <button type="submit" style="width:100%;font-family:var(--font);font-size:15px;font-weight:700;background:var(--green);color:var(--navy-deep);border:none;padding:16px 28px;border-radius:4px;cursor:pointer;margin-bottom:48px;letter-spacing:0.2px;transition:background .2s;" onmouseover="this.style.background='#17E685'" onmouseout="this.style.background='#04FF88'">
+      ✓ Soumettre mon auto-évaluation
+    </button>
+
+  </form>
+</div>
 <input type="email" name="email" placeholder="Votre email professionnel" style="width:100%;padding:12px;margin-bottom:16px;border:1px solid var(--navy-mid);background:transparent;color:var(--white);border-radius:4px;font-family:var(--font);font-size:14px;">
     <input type="hidden" name="score" id="form-score" value="0/8">
 <button type="submit" style="width:100%;font-family:var(--font);font-size:15px;font-weight:700;background:var(--green);color:var(--navy-deep);border:none;padding:16px 28px;border-radius:4px;cursor:pointer;margin-bottom:40px;letter-spacing:0.2px;transition:all .2s;" onmouseover="this.style.background='#17E685'" onmouseout="this.style.background='var(--green)'">
